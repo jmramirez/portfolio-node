@@ -1,0 +1,32 @@
+
+
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+
+@mixin basic_link {
+  text-decoration: none;
+
+}
+
+@mixin button_basic  {
+  padding: 1rem 1rem;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #2a4fbf;
+  font: inherit;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.05rem;
+}
