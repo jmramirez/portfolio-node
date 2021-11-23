@@ -1,9 +1,215 @@
 @use '../../partials/mixins' as *;
 
+
+
 .header {
-    position: fixed;
-    width: 100%;
-    background-color: #2A4FBF;
-    z-index: 9;
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 14%);
+  position: fixed;
+  width: 100%;
+  background-color: #2A4FBF;
+  z-index: 9;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 14%);
+  
+  &__mobile {
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    opacity: 0;
+    transition: height .1s ease-in-out, opacity 0.05s 0.1s ease-out,  padding 0.1s 0.1s ease-out;
+    height: 0;
+    justify-content: space-between;
+    
+
+    &--open {
+      // padding: 1rem 1.5rem;
+      visibility: visible;
+      height: 10rem;
+      opacity: 1;
+      
+
+      @include tablet {
+        visibility: hidden;
+        height: 0;
+      }
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+  }
+
+  
+  &-nav {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      padding: 2rem 1rem;
+    }
+
+    @include desktop {
+      max-width: 73.75rem;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+    }
+
+
+    &__menu {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0.3rem 0;
+      transition: all 0.1s ease-in-out;
+      overflow-x: hidden;
+
+      &--open {
+        padding: 0;
+        // flex-direction: column-reverse;
+      }
+
+      &-bar {
+        width: 1.5rem;
+        height: 2px;
+        background-color: #FFFFFF;
+        transition: all 0.1s ease-in-out;
+
+        &--top {
+          transform: rotate(0deg);
+          transform-origin: left;
+
+          &-open {
+            transform: rotate(45deg);
+            transform-origin: left;
+            width: 2rem;
+          }
+        }
+
+        &--bottom {
+          transform: rotate(0deg);
+          transform-origin: left;
+
+          &-open {
+            transform: rotate(-45deg);
+            transform-origin: left;
+            width: 2rem;
+          }
+        }
+
+        &--medium {
+          transform: translateX(0);
+
+          &-open {
+            transform: translateX(100%);
+          }
+        }
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &__right {
+      display: none;
+
+      @include tablet {
+        display: flex;
+        margin-left: auto;
+        align-items: center
+      }
+    }
+
+    &__link {
+      @include basic_link;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #FFFFFF;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+
+      @include tablet {
+        margin-left: 1.5rem;
+        font-size: 1.1rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      @include desktop {
+        font-size: 1.5rem;
+      }
+
+      
+      &--mobile {
+        border: 1px solid #FFFFFF;
+        padding: 0.5rem;
+        margin: 0 1rem 1rem 1rem;
+      }
+
+      &--main {
+        border: 1px solid #FFFFFF;
+        padding: 1rem 0.5rem 0.5rem 1.1rem;
+        color: #FFFFFF;
+        position: relative;
+        font-size: 1.2rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          border: 1px solid #FFFFFF;
+          top: 5px;
+          right: -7px;
+
+          @include tablet {
+            // top: 8px;
+            // right: -10px;
+          }
+        }
+
+        @include tablet {
+          padding: 1rem 2rem 1rem 3rem;
+          font-size: 1.7rem;
+          margin-left: 0;
+        }
+      }
+
+      &--cta {
+        padding: 0.5rem 1rem;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        background-color: #140dda;
+        margin: 0 1.5rem 1rem 1.5rem;
+
+        @include tablet {
+          color: #FFFFFF;
+          border: 1px solid #FFFFFF;
+          transition: color 0.2s ease-in-out;
+          margin: 0 0 0 1rem;
+          font-weight: 600;
+
+          &:hover {
+            background: #FFFFFF;
+            color: #2a4fbf;
+          }
+        }
+      }
+
+      &--about {
+        padding-top: 1rem;
+
+        @include tablet {
+          margin: 0;
+          padding-top: 0;
+        }
+      }
+    }
+  }
 }
