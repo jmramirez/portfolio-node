@@ -1,0 +1,99 @@
+@use '../../partials/mixins' as *;
+
+.contact {
+  margin-top: 1rem;
+  width: 100%;
+  min-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    margin-top: 3rem;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 58rem;
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    align-self: flex-start;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+  
+  &__form {
+    width: 100%;
+    max-width: 1043px;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 14%);
+
+    @include tablet {
+      width: 99%;
+      margin-top: 4rem;
+      padding: 2rem 4rem;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
+
+    &__controls {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      
+      &__label {
+        margin-bottom: 0.75rem;
+      }
+
+      &_input {
+        height: 2.5rem;
+        font-family: inherit;
+        font-size: 1.05rem;
+        border: 1px solid #E6E4E4;
+        background-color: #fafafa;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        font-weight: 600;
+        color: #565656;
+
+        &:focus {
+          outline-color: #2a4fbf;
+          color: #2a4fbf;
+          border-radius: 0;
+        }
+        
+        &--text {
+          height: 7.5rem;
+        }
+      }
+      
+      &__submit {
+        @include button_basic;
+        color: #FFFFFF;
+        background-color: #2a4fbf;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        align-self: flex-end;
+        
+        @include tablet {
+          width: 7rem;
+        }
+      }
+    }
+  }
+  
+ 
+}
