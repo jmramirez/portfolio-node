@@ -1,0 +1,19 @@
+@use './../../partials/mixins' as *;
+
+.page {
+  min-width: 20rem;
+  padding: 7.5rem 1rem 4rem 1rem;
+  width: 100%;
+
+
+  @include tablet {
+    padding: 10rem 1rem;
+  }
+
+  @include desktop {
+    width: 70rem;
+    margin: 0 auto;
+    padding: 11rem 1rem 5rem 1rem;
+    display: flex;
+  }
+}
