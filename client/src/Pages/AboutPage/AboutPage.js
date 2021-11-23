@@ -4,7 +4,7 @@ import './AboutPage.scss'
 
 export const AboutPage = () => (
     <Page>
-        <section class="about">
+        <section className="about">
             <div>
                 <div className="about__photo">
                     <img src={profile_color} alt="jose_img" className="about__photo__img"/>
