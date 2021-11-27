@@ -1,10 +1,22 @@
 import './ContactPage.scss'
 import { Page } from '../../components/Page/Page'
 import { useForm } from 'react-hook-form'
+import axios from 'axios'
 
 export const ContactPage = () => {
     const { register, handleSubmit, formState: {errors} } = useForm()
-    const onSubmit = data => console.log(data) 
+    const onSubmit = data => {
+        axios.post('http://localhost:8090/send',{
+            "from": data.email,
+            "sender": data.email,
+            "to": "joseportfolio81@outlook.com",
+            "subject": data.subject,
+            "text": data.message
+        })
+        .then(response =>{
+            console.log(response.data)
+        })
+    }
 
     return(
         <Page>
