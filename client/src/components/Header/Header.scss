@@ -124,12 +124,20 @@
     }
 
     &__link {
-      @include basic_link;
+      font: inherit;
       font-size: 1rem;
       font-weight: 300;
       color: #FFFFFF;
+      background-color: #2A4FBF;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      outline: none;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
 
       @include tablet {
         margin-left: 1.5rem;
