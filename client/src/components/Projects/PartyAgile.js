@@ -20,7 +20,7 @@ export const PartyAgile = () => (
         </p>
         <h3 className="project__subtitle">User Profile</h3>
         <p className="project__text">
-            There are two kinds of users, or roles defined for this application, the main user who would be the <span className="project__text__span">Event Planner</span> , 
+            There are two kinds of users, or roles defined for this application, the main user who would be the <span className="project__text__span">Event Planner</span>, 
             which can create and modify events, assign vendors to the events, and communicate with them any time.
         </p>
         <p className="project__text">
@@ -29,26 +29,26 @@ export const PartyAgile = () => (
         </p>
         <h3 className="project__subtitle">Tech Stack</h3>
         <p className="project__text">
-            <span className="project__text__span">Server Side:</span>
+            <span className="project__text__span">Server Side: </span>
             .NET version 5.0, with C#. The web API is developed using a multilayer architecture, 
             including Data Access, necessary to store all the information in a database, 
             Data Model which is the representation of the data handled by the API, 
             and HTTP Layer which included all the action methods necessary to handle requests and responses.
         </p>
         <p className="project__text">
-            <span className="project__text__span">Database:</span>
+            <span className="project__text__span">Database: </span>
             Microsoft SQL Server
         </p>
         <p className="project__text">
-            <span className="project__text__span">Client Side:</span>
+            <span className="project__text__span">Client Side: </span>
             React.js, SASS
         </p>
         <p className="project__text">
-            <span className="project__text__span">Authentication:</span>
+            <span className="project__text__span">Authentication: </span>
             ASP.NET Identity, JWT
         </p>
         <p className="project__text">
-            <span className="project__text__span">Libraries:</span>
+            <span className="project__text__span">Libraries: </span>
             Microsoft Entity Framwork as ORM, SignalR which is a library for .NET that allows server-side code 
             to push content to connected clients.
         </p>

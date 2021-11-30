@@ -23,7 +23,7 @@ export const CoreStoreNet = () => (
             The web API is developed using a multiyear architecture, including data access, domain, and HTTP layer.
         </p>
         <p className="project__text">
-            <span className="project__text__span">Data access:</span>
+            <span className="project__text__span">Data access: </span>
             necessary to store information in a database, in this case Entity Framework is used as ORM, 
             and the repository pattern is used as an additional abstraction over the data source. 
             Additionally, a separation between saving operation and reading/writing operations is made using the unit of work approach, 
@@ -31,12 +31,12 @@ export const CoreStoreNet = () => (
             while unit of work implements a way to transfer those changes to the database.
         </p>
         <p className="project__text">
-            <span className="project__text__span">Data model:</span>
+            <span className="project__text__span">Data model: </span>
             is the representation of the data handled by the API including entities, 
             data transfer objects (Dtos), as well as all the application logic using the service classNamees approach.
         </p>
         <p className="project__text">
-            <span className="project__text__span">HTTP layer:</span>
+            <span className="project__text__span">HTTP layer: </span>
             includes the action methods that handle all the call requests to the service layer built in the domain project 
             and send the response. 
         </p>
