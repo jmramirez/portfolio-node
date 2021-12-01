@@ -21,7 +21,7 @@ export const AboutPage = () => (
                     and full stack web developer. Excited about learning modern technologies, as well as industry trends. Ever since I finished my education at college, I have worked for different companies in administrative positions and IT support,
                     but then I realized my passion is web development,
                     and decided to hone my programming skills through
-                    self-study as well as coding bootcamp Brainstation.
+                    self-study as well as coding bootcamp BrainStation.
                 </p>
                 <h3 className="about__content__subtitle">Technologies I have been working with recently</h3>
                 <div className="about__content__technologies">
