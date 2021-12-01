@@ -33,7 +33,7 @@ export const Header = () => {
                 <div className="header-nav__right">
                     <Link to="/about" className="header-nav__link">About Me</Link>
                     <Link to="/portfolio" className="header-nav__link">Portfolio</Link>
-                    <a className="header-nav__link" href="https://portfolioapps31.blob.core.windows.net/portfolio/Jose Ramirez-Resume.pdf" rel="noreferrer" target="_blank">Resume</a>
+                    <a className="header-nav__link" href="https://portfolioapps31.blob.core.windows.net/portfolio/JoseRamirez-Resume.pdf" rel="noreferrer" target="_blank">Resume</a>
                     <Link to="/contact" className="header-nav__link header-nav__link--cta">Contact Me</Link>
                 </div>
             </nav>
