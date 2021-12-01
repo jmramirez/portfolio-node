@@ -18,7 +18,6 @@ export const ContactPage = () => {
     const [serverState, setServerState] = useState()
 
     const handleServerResponse = (ok, msg) => {
-        console.log("message: " + ok)
         setServerState({ok,msg})
     }
 
@@ -48,7 +47,7 @@ export const ContactPage = () => {
                         <Form className="contact__form" id="fs-frm" noValidate>
                             <div className="contact__form__controls">
                                 <label htmlFor="name" className="contact__form__controls__label" >Name</label>
-                                <Field id="name" name="name" className="contact__form__controls_input" autocomplete="off" />
+                                <Field id="name" name="name" className="contact__form__controls_input" />
                                 <ErrorMessage name="name" className="contact__form__error" component="p" />
                             </div>
                             <div className="contact__form__controls">
