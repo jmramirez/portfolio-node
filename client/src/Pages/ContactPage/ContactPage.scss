@@ -71,7 +71,7 @@
 
         &:focus {
           outline-color: #2a4fbf;
-          color: #2a4fbf;
+          color: #565656;
           border-radius: 0;
         }
         
@@ -92,6 +92,18 @@
           width: 7rem;
         }
       }
+    }
+
+    &__success {
+      margin: 1rem 0;
+      padding: 0.75rem 1rem 0.75rem 1rem;
+      color: #155724;
+      border-color: #c3e6cd;
+      background-color: #D4EDDA;
+      border-radius: .25rem;
+      font-size: .9rem;
+      font-weight: 600;
+      margin-top: 1rem;
     }
 
     &__error {

@@ -1,20 +1,41 @@
 import './ContactPage.scss'
+import { useState } from 'react'
+import { formSetting } from '../../AppSettings'
 import { Page } from '../../components/Page/Page'
-import { useForm } from 'react-hook-form'
 import axios from 'axios'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as yup from 'yup'
+
+const formSchema = yup.object().shape({
+    email: yup.string().email("Invalid email").required("Email is required"),
+    name: yup.string().required("Name is required"),
+    subject: yup.string().required("Subject is required"),
+    message: yup.string().required("Message is required")
+})
+
 
 export const ContactPage = () => {
-    const { register, handleSubmit, formState: {errors} } = useForm()
-    const onSubmit = data => {
-        axios.post('http://localhost:8090/send',{
-            "from": data.email,
-            "sender": data.email,
-            "to": "joseportfolio81@outlook.com",
-            "subject": data.subject,
-            "text": data.message
+    const [serverState, setServerState] = useState()
+
+    const handleServerResponse = (ok, msg) => {
+        console.log("message: " + ok)
+        setServerState({ok,msg})
+    }
+
+    const handleSubmit = (values, actions) => {
+        axios({
+            method: "POST",
+            url: `https://formspree.io/f/${formSetting}`,
+            data: values
         })
-        .then(response =>{
-            console.log(response.data)
+        .then(response => {
+            actions.setSubmitting(false)
+            actions.resetForm()
+            handleServerResponse(true, "Thanks for contact me!")
+        })
+        .catch(error => {
+            actions.setSubmitting(false)
+            handleServerResponse(false, error.response.data.error)
         })
     }
 
@@ -22,29 +43,38 @@ export const ContactPage = () => {
         <Page>
             <section className="contact">
                 <h1 className="contact__title">Contact Me</h1>
-                <form className="contact__form" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="contact__form__controls">
-                        <label className="contact__form__controls__label">Name</label>
-                        <input className="contact__form__controls_input" type="text" {...register("name", {required: true})}/>
-                        {errors.name &&( <p className="contact__form__error">You must enter Name</p>)}
-                    </div>
-                    <div className="contact__form__controls">
-                        <label className="contact__form__controls__label">Email</label>
-                        <input className="contact__form__controls_input" type="text" {...register("email", {required: true})} />
-                        {errors.email &&( <p className="contact__form__error">You must enter Email</p>)}
-                    </div>
-                    <div className="contact__form__controls">
-                        <label className="contact__form__controls__label">Subject</label>
-                        <input className="contact__form__controls_input" type="text"  {...register("subject", {required: true})}/>
-                        {errors.subject &&( <p className="contact__form__error">You must enter Subject</p>)}
-                    </div>
-                    <div className="contact__form__controls">
-                        <label className="contact__form__controls__label">Message</label>
-                        <textarea className="contact__form__controls_input contact__form__controls_input--text" {...register("message", {required: true})}></textarea>
-                        {errors.message &&( <p className="contact__form__error">You must enter message</p>)}
-                    </div>
-                    <input type="submit" className="contact__form__controls__submit" value="Submit"/>
-                </form>
+                <Formik initialValues={{email:"", name:"", subject:"", message:""}} onSubmit={handleSubmit} validationSchema={formSchema}>
+                    {({ isSubmitting }) =>(
+                        <Form className="contact__form" id="fs-frm" noValidate>
+                            <div className="contact__form__controls">
+                                <label htmlFor="name" className="contact__form__controls__label" >Name</label>
+                                <Field id="name" name="name" className="contact__form__controls_input" autocomplete="off" />
+                                <ErrorMessage name="name" className="contact__form__error" component="p" />
+                            </div>
+                            <div className="contact__form__controls">
+                                <label htmlFor="email" className="contact__form__controls__label">Email</label>
+                                <Field id="email" type="email" name="email" className="contact__form__controls_input" />
+                                <ErrorMessage name="email" className="contact__form__error" component="p" />
+                            </div>
+                            <div className="contact__form__controls">
+                                <label className="contact__form__controls__label">Subject</label>
+                                <Field  id="subject" name="subject"  className="contact__form__controls_input"/>
+                                <ErrorMessage name="subject" className="contact__form__error" component="p" />
+                            </div>
+                            <div className="contact__form__controls">
+                                <label className="contact__form__controls__label">Message</label>
+                                <Field id="message" name="message" className="contact__form__controls_input contact__form__controls_input--text" component="textarea" />
+                                <ErrorMessage name="message" className="contact__form__error" component="p" />
+                            </div>
+                            <button type="submit" className="contact__form__controls__submit" disabled={isSubmitting}>
+                                Submit
+                            </button>
+                            {serverState && (
+                                <p className={!serverState.ok ? "contact__form__error" : "contact__form__success"}>{serverState.msg}</p>
+                            )}
+                        </Form>
+                    )}
+                </Formik>
             </section>
         </Page>
     )

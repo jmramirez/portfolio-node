@@ -33,14 +33,14 @@ export const Header = () => {
                 <div className="header-nav__right">
                     <Link to="/about" className="header-nav__link">About Me</Link>
                     <Link to="/portfolio" className="header-nav__link">Portfolio</Link>
-                    <a class="header-nav__link" href="https://portfolioapps31.blob.core.windows.net/portfolio/Jose Ramirez-Resume.pdf" rel="noreferrer" target="_blank">Resume</a>
+                    <a className="header-nav__link" href="https://portfolioapps31.blob.core.windows.net/portfolio/Jose Ramirez-Resume.pdf" rel="noreferrer" target="_blank">Resume</a>
                     <Link to="/contact" className="header-nav__link header-nav__link--cta">Contact Me</Link>
                 </div>
             </nav>
             <div className={"header__mobile" + (open?' header__mobile--open':'')}>
                 <button className="header-nav__link header-nav__link--about" onClick={()=>{linkTo('about')}}>About me</button>
                 <button className="header-nav__link" onClick={()=>{linkTo('portfolio')}}>Portfolio</button>
-                <a class="header-nav__link" href="https://portfolioapps31.blob.core.windows.net/portfolio/Jose Ramirez-Resume.pdf" rel="noreferrer" target="_blank">Resume</a>
+                <a className="header-nav__link" href="https://portfolioapps31.blob.core.windows.net/portfolio/Jose Ramirez-Resume.pdf" rel="noreferrer" target="_blank">Resume</a>
                 <button className="header-nav__link header-nav__link--mobile" onClick={()=>{linkTo('contact')}}>Conctact Me</button>
             </div>
         </header>

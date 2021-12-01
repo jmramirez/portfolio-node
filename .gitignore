@@ -12,6 +12,7 @@
 **.pnp.js
 
 **.env
+**AppSettings.js
 
 # testing
 **/coverage
