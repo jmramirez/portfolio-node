@@ -17,13 +17,13 @@ export const AboutPage = () => (
             <div className="about__content">
                 <h2 className="about__content__title">About Me</h2>
                 <h3 className="about__content__subtitle">Who am I?</h3>
-                <p className="about__content__text">My name is Jose, I’m a Systems Engineer, computer programmer,
-                    and full stack web developer. Excited about learning new technologies, as well as industry trends. Ever since I finished my education at college, I have worked for many companies in administrative positions and IT support,
+                <p className="about__content__text">My name is Jose, I am a Systems Engineer, computer programmer,
+                    and full stack web developer. Excited about learning modern technologies, as well as industry trends. Ever since I finished my education at college, I have worked for different companies in administrative positions and IT support,
                     but then I realized my passion is web development,
                     and decided to hone my programming skills through
                     self-study as well as coding bootcamp Brainstation.
                 </p>
-                <h3 className="about__content__subtitle">Technologies I've been working with recently</h3>
+                <h3 className="about__content__subtitle">Technologies I have been working with recently</h3>
                 <div className="about__content__technologies">
                     <p className="about__content__technologies__item">Html5</p>
                     <p className="about__content__technologies__item">CSS</p>

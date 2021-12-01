@@ -33,7 +33,7 @@ export const CoreStoreNet = () => (
         <p className="project__text">
             <span className="project__text__span">Data model: </span>
             is the representation of the data handled by the API including entities, 
-            data transfer objects (Dtos), as well as all the application logic using the service classNamees approach.
+            data transfer objects (Dtos), as well as all the application logic using the service classNames approach.
         </p>
         <p className="project__text">
             <span className="project__text__span">HTTP layer: </span>
@@ -47,11 +47,11 @@ export const CoreStoreNet = () => (
         </p>
         <h3 className="project__subtitle">Stripe</h3>
         <p className="project__text">
-            The application uses Stripe gateway in order to allow users to complete their purchases,
+            The application uses Stripe gateway in order to allow users to complete their purchases
             and process their payment information.
         </p>
         <h3 className="project__subtitle">Checkout Process</h3>
-        <p className="project__text">In order to checkout, the user needs to be registered in the system, a demo account has been created for testing purposes.</p>
+        <p className="project__text">To initiate the checkout process, the user needs to be registered in the system, a demo account has been created for testing purposes.</p>
         <p className="project__text">
             Once the user has logged in, and filled the information required, name, address, country, postal code, 
             the payment details for the <span className="project__text__span">Stripe API</span> to work, are <span className="project__text__span">any name</span>, and <span className="project__text__span">4242 4242 4242 4242</span> as credit card number, a future date, and any CVC and ZIP code.

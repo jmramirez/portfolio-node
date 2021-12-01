@@ -50,7 +50,7 @@
         content: "";
         width: 32rem;
         height: 3rem;
-        top: 27rem;
+        top: 29rem;
         right: -17rem;
         position: absolute;
         border-top: .25rem solid #2a4fbf;
@@ -165,6 +165,8 @@
           margin-right: 0.5rem;
           border-radius: 2rem;
           text-decoration: none;
+          font-size: 1rem;
+          padding: 0.5rem;
 
           @include tablet {
             font-size: 1.5rem;

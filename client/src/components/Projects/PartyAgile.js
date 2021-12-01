@@ -49,7 +49,7 @@ export const PartyAgile = () => (
         </p>
         <p className="project__text">
             <span className="project__text__span">Libraries: </span>
-            Microsoft Entity Framwork as ORM, SignalR which is a library for .NET that allows server-side code 
+            Microsoft Entity Framework as ORM, SignalR which is a library for .NET that allows server-side code 
             to push content to connected clients.
         </p>
         <div className="project__action">
