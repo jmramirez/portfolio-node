@@ -37,7 +37,7 @@ export const PartyAgile = () => (
         </p>
         <p className="project__text">
             <span className="project__text__span">Database: </span>
-            Microsoft SQL Server
+            PostgreSQL
         </p>
         <p className="project__text">
             <span className="project__text__span">Client Side: </span>
