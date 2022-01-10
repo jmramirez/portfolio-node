@@ -13,7 +13,7 @@
     }
     
     @include desktop {
-     margin: 0 auto;
+     margin: 4rem auto;
      width: 100%;
      max-width: 58rem;
     }
@@ -197,6 +197,15 @@
         }
        }
       }
+
+      &__link {
+          display: flex;
+          justify-content: space-between;
+
+          @include tablet {
+            justify-content: flex-end;
+          }
+      }
    
       &__action {
        align-self: flex-end;
@@ -208,9 +217,11 @@
        padding: 0.5rem;
        text-decoration: none;
        
+       
        @include tablet {
         padding: 1rem;
         font-size: 1.1rem;
+        margin-left: 1.5rem;
        }
       }
       

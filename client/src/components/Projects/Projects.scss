@@ -8,7 +8,11 @@
   
   @include tablet {
     padding: 2rem 4rem;
-  } 
+  }
+  
+  @include desktop {
+    margin-top: 4rem;
+  }
   
   &__img {
     height: 6rem;

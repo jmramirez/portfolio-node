@@ -30,7 +30,7 @@ export const ContactPage = () => {
         .then(response => {
             actions.setSubmitting(false)
             actions.resetForm()
-            handleServerResponse(true, "Thanks for contact me!")
+            handleServerResponse(true, "Thanks for contacting me!")
         })
         .catch(error => {
             actions.setSubmitting(false)

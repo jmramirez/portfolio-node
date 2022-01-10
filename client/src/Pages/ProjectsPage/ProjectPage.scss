@@ -8,7 +8,11 @@
   
   @include tablet {
     padding: 2rem 4rem;
-  } 
+  }
+  
+  @include desktop {
+    padding-top: 4rem
+  }
 
   &__link {
     @include basic_link;

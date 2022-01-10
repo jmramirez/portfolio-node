@@ -1,5 +1,5 @@
 import { Page } from '../../components/Page/Page'
-import profile_color from '../../assets/img/jose_img_color.jpg'
+import profile_color from '../../assets/img/jose_img_2.jpg'
 import './AboutPage.scss'
 
 export const AboutPage = () => (

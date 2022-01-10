@@ -35,7 +35,10 @@ export const PortfolioPage = () => (
                         <p className="portfolio__project__content__tech__name">SQL Server</p>
                         <p className="portfolio__project__content__tech__name">SignaLR</p>
                     </div>
-                    <Link className="portfolio__project__content__action" to="/portfolio/party-agile">Read More</Link>
+                    <div className='portfolio__project__content__link'>
+                        <a href="https://www.partyagile.com/login" target="_blank" rel="noopener noreferrer"  className="portfolio__project__content__action"><i className="fas fa-link project__action__links__icon"></i> Link to App</a>
+                        <Link className="portfolio__project__content__action" to="/portfolio/party-agile">Read More</Link>
+                    </div>
                 </div>
             </div>
             <div className="portfolio__project">
@@ -68,7 +71,10 @@ export const PortfolioPage = () => (
                         <p className="portfolio__project__content__tech__name">SQL Server</p>
                         <p className="portfolio__project__content__tech__name">Stripe API</p>
                     </div>
-                    <Link className="portfolio__project__content__action" to="/portfolio/corestorenet">Read More</Link>
+                    <div className='portfolio__project__content__link'>
+                        <a href="https://corestorenet.com/" target="_blank"  rel="noopener noreferrer"  className="portfolio__project__content__action"><i className="fas fa-link project__action__links__icon"></i> Link to App</a>
+                        <Link className="portfolio__project__content__action" to="/portfolio/corestorenet">Read More</Link>
+                    </div>
                 </div>
             </div>
         </section>
