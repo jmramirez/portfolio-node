@@ -6,23 +6,23 @@ import { CoreStoreNet } from "../../components/Projects/CoreStoreNet"
 
 
 export const ProjectPage = () => {
-    const { name } = useParams() 
+  const { name } = useParams()
 
-    return(
-        <Page>
-          <Link to="/portfolio" className="project__link"> Go Back</Link>
-            { name && 
-              name === 'party-agile' &&
-              <PartyAgile />
-            }
-            {  name &&
-               name === 'corestorenet' &&
-               <CoreStoreNet />
-            }
-            { name &&
-              name !== "party-agile" && name !== "corestorenet" &&
-                <Navigate to="/" />
-            }
-        </Page>
-    )
+  return(
+    <Page>
+      <Link to="/portfolio" className="project__link"> Go Back</Link>
+      { name &&
+        name === 'party-agile' &&
+        <PartyAgile />
+      }
+      {  name &&
+        name === 'corestorenet' &&
+        <CoreStoreNet />
+      }
+      { name &&
+        name !== "party-agile" && name !== "corestorenet" &&
+        <Navigate to="/" />
+      }
+    </Page>
+  )
 }

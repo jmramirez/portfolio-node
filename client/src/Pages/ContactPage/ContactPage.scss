@@ -27,7 +27,7 @@
       font-size: 2.5rem;
     }
   }
-  
+
   &__form {
     width: 100%;
     max-width: 1043px;
@@ -53,7 +53,7 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
-      
+
       &__label {
         margin-bottom: 0.75rem;
       }
@@ -74,12 +74,12 @@
           color: #565656;
           border-radius: 0;
         }
-        
+
         &--text {
           height: 7.5rem;
         }
       }
-      
+
       &__submit {
         @include button_basic;
         color: #FFFFFF;
@@ -87,7 +87,7 @@
         font-size: 0.9rem;
         padding: 0.5rem;
         align-self: flex-end;
-        
+
         @include tablet {
           width: 7rem;
         }
@@ -113,6 +113,6 @@
       margin-top: 0.2rem;
     }
   }
-  
- 
+
+
 }

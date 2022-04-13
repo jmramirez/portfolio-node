@@ -1,80 +1,80 @@
 @use '../../partials/mixins' as *;
 
 .portfolio {
-    margin-top: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  min-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    margin-top: 3rem;
+  }
+
+  @include desktop {
+    margin: 4rem auto;
     width: 100%;
-    min-width: 18rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    max-width: 58rem;
+  }
+
+  &__text {
+    margin-top: 1rem;
+
+    align-self: end;
+    font-size: 0.7rem;
+
     @include tablet {
-     margin-top: 3rem;
-    }
-    
-    @include desktop {
-     margin: 4rem auto;
-     width: 100%;
-     max-width: 58rem;
-    }
-    
-    &__text {
-     margin-top: 1rem;
-     
-     align-self: end;
-     font-size: 0.7rem;
-     
-     @include tablet {
       margin-right: 1.5rem;
       margin-top: 4rem;
       font-size: 0.9rem;
-     }
     }
-    
-    &__title {
-     font-size: 1.7rem;
-     align-self: flex-start;
-     font-weight: 600;
-     
-     @include tablet {
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    align-self: flex-start;
+    font-weight: 600;
+
+    @include tablet {
       font-size: 2.5rem;
-     }
     }
-    
-    &__project {
-     width: 100%;
-     max-width: 1043px;
-     background-color: #FFFFFF;
-     padding: 1rem;
-     margin-top: 2rem;
-     display: flex;
-     flex-direction: column;
-     transition: all 0.2s ease-in-out;
-     
-     &:hover {
+  }
+
+  &__project {
+    width: 100%;
+    max-width: 1043px;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
       box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 14%);
-     }
-     
-     &:first-of-type {
+    }
+
+    &:first-of-type {
       margin-top: 0.5rem;
-      
+
       @include tablet {
-       margin-top: 1rem;
+        margin-top: 1rem;
       }
-     }
-     
-     @include tablet {
+    }
+
+    @include tablet {
       width: 99%;
       margin-top: 4rem;
       padding: 2rem 4rem;
-     }
-     
-     @include desktop {
+    }
+
+    @include desktop {
       width: 100%;
       flex-direction: row;
-     }
-     
-     &__img {
+    }
+
+    &__img {
       width: 100%;
       height: 5rem;
       background-size: cover;
@@ -82,149 +82,149 @@
       background-image: url('https://portfolioapps31.blob.core.windows.net/partyagile/initial-page-image-1.jpg');
       margin-right: 0;
       text-decoration: none;
-      
+
       @include tablet {
-       height: 6rem;
-      }
-      
-      @include desktop {
-       height: 30rem;
-       width: 19rem;
-       margin-right: 2rem;
-      }
-      
-      &--ecommerce {
-       background-image: url('https://portfolioapps31.blob.core.windows.net/portfolio/ecommerce_photo.jpg');
-       height: 5rem;
-       
-       @include tablet {
         height: 6rem;
-       }
-       
-       @include desktop {
-        height: 33rem;
-       }
       }
-      
+
+      @include desktop {
+        height: 30rem;
+        width: 19rem;
+        margin-right: 2rem;
+      }
+
+      &--ecommerce {
+        background-image: url('https://portfolioapps31.blob.core.windows.net/portfolio/ecommerce_photo.jpg');
+        height: 5rem;
+
+        @include tablet {
+          height: 6rem;
+        }
+
+        @include desktop {
+          height: 33rem;
+        }
+      }
+
       &__overlay {
-       width: 100%;
-       height: 100%;
-       background-color: rgba(50,50,50,0.1);
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       padding: 1rem;
-       color: #2a4fbf;
-       
-       @include desktop {
-        justify-content: flex-end;
-       }
-   
-       &__title {
-        font-size: 1.6rem;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(50,50,50,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
         color: #2a4fbf;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-       }
-       
-       &__text {
-        font-size: 0.78rem;
-       }
+
+        @include desktop {
+          justify-content: flex-end;
+        }
+
+        &__title {
+          font-size: 1.6rem;
+          color: #2a4fbf;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+        }
+
+        &__text {
+          font-size: 0.78rem;
+        }
       }
-     }
-     
-     
-     &__content {
+    }
+
+
+    &__content {
       margin-top: 1.5rem;
       display: flex;
       flex-direction: column;
-      
+
       @include desktop {
-       width: 37rem;
+        width: 37rem;
       }
-      
+
       &__title {
-       font-size: 1.3rem;
-       font-weight: 600;
-       margin-bottom: 0.5rem;
-       
-       @include tablet {
-        font-size: 1.5rem;
-        margin-bottom: 0.8rem;
-       }
-      }
-      
-      &__text {
-       font-size: 0.8rem;
-       line-height: 1.4rem;
-       margin-bottom: 1.2rem;
-       font-weight: 300;
-       
-       
-       @include  tablet {
-        font-size: 1.1rem;
-        line-height: 1.7rem;
-       }
-      }
-      
-      &__subtitle {
-       color: #2a4fbf;
-       font-size: 1rem;
-       margin-bottom: 0.6rem;
-       
-       @include tablet {
-        font-size: 1.2rem;
-        margin-bottom: 0.6rem;
-       }
-      }
-      
-      &__tech {
-       display: flex;
-       flex-wrap: wrap;
-       margin-bottom: 0.7rem;
-       
-       &__name {
-        padding: 0.5rem;
-        background-color: #f0f0f3;
-        border: 1px solid #2a4fbf;
-        color: #565656;
-        margin-right: 0.9rem;
-        margin-bottom: 0.8rem;
-        font-size: 0.75rem;
-        
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+
         @include tablet {
-         font-size: 0.9rem;
+          font-size: 1.5rem;
+          margin-bottom: 0.8rem;
         }
-       }
+      }
+
+      &__text {
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+        margin-bottom: 1.2rem;
+        font-weight: 300;
+
+
+        @include  tablet {
+          font-size: 1.1rem;
+          line-height: 1.7rem;
+        }
+      }
+
+      &__subtitle {
+        color: #2a4fbf;
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+
+        @include tablet {
+          font-size: 1.2rem;
+          margin-bottom: 0.6rem;
+        }
+      }
+
+      &__tech {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0.7rem;
+
+        &__name {
+          padding: 0.5rem;
+          background-color: #f0f0f3;
+          border: 1px solid #2a4fbf;
+          color: #565656;
+          margin-right: 0.9rem;
+          margin-bottom: 0.8rem;
+          font-size: 0.75rem;
+
+          @include tablet {
+            font-size: 0.9rem;
+          }
+        }
       }
 
       &__link {
-          display: flex;
-          justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
 
-          @include tablet {
-            justify-content: flex-end;
-          }
+        @include tablet {
+          justify-content: flex-end;
+        }
       }
-   
+
       &__action {
-       align-self: flex-end;
-       margin-top: auto;
-       @include button_basic;
-       color: #FFFFFF;
-       background-color: #2a4fbf;
-       font-size: 0.9rem;
-       padding: 0.5rem;
-       text-decoration: none;
-       
-       
-       @include tablet {
-        padding: 1rem;
-        font-size: 1.1rem;
-        margin-left: 1.5rem;
-       }
+        align-self: flex-end;
+        margin-top: auto;
+        @include button_basic;
+        color: #FFFFFF;
+        background-color: #2a4fbf;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        text-decoration: none;
+
+
+        @include tablet {
+          padding: 1rem;
+          font-size: 1.1rem;
+          margin-left: 1.5rem;
+        }
       }
-      
-     }
+
     }
-   }
+  }
+}

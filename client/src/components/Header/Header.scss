@@ -8,7 +8,7 @@
   background-color: #2A4FBF;
   z-index: 9;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 14%);
-  
+
   &__mobile {
     display: flex;
     visibility: hidden;
@@ -17,14 +17,14 @@
     transition: height .1s ease-in-out, opacity 0.05s 0.1s ease-out,  padding 0.1s 0.1s ease-out;
     height: 0;
     justify-content: space-between;
-    
+
 
     &--open {
       // padding: 1rem 1.5rem;
       visibility: visible;
       height: 10rem;
       opacity: 1;
-      
+
 
       @include tablet {
         visibility: hidden;
@@ -38,7 +38,7 @@
 
   }
 
-  
+
   &-nav {
     padding: 1rem;
     display: flex;
@@ -150,7 +150,7 @@
         font-size: 1.5rem;
       }
 
-      
+
       &--mobile {
         border: 1px solid #FFFFFF;
         padding: 0.5rem;
@@ -165,7 +165,7 @@
         font-size: 1.2rem;
         font-family: 'Open Sans', sans-serif;
         font-weight: 300;
-        
+
 
         &::before {
           content: "";

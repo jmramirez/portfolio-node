@@ -5,11 +5,11 @@
   background-color: #FFFFFF;
   padding: 1rem;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 14%);
-  
+
   @include tablet {
     padding: 2rem 4rem;
   }
-  
+
   @include desktop {
     padding-top: 4rem
   }
@@ -25,7 +25,7 @@
       display: none;
     }
   }
-  
+
   &__img {
     height: 6rem;
     width: 100%;
@@ -33,11 +33,11 @@
     background-position: bottom;
     background-image: url('https://portfolioapps31.blob.core.windows.net/partyagile/initial-page-image-1.jpg');
     margin-bottom: 2rem;
-    
+
     &--ecommerce {
       background-image: url('https://portfolioapps31.blob.core.windows.net/portfolio/ecommerce_photo.jpg');
     }
-    
+
     &__overlay {
       width: 100%;
       height: 100%;
@@ -60,34 +60,34 @@
       }
     }
   }
-  
+
   &__text {
     font-size: 0.9rem;
     line-height: 1.7rem;
     margin-bottom: 1.5rem;
     font-weight: 300;
-    
+
     @include tablet {
       font-size: 1.1rem;
     }
-    
+
     &__span {
       color: #2a4fbf;
       font-weight: 500;
     }
   }
-  
+
   &__subtitle {
     font-size: 1.2rem;
     color: #2a4fbf;
     margin: 1rem 0;
     font-weight: 600;
-    
+
     @include tablet {
       font-size: 1.4rem;
     }
   }
-  
+
   &__images {
     display: flex;
     flex-wrap: wrap;
@@ -105,12 +105,12 @@
       }
     }
   }
-  
+
   &__action {
     display: flex;
     margin-bottom: 2rem;
-    
-    
+
+
     &__links {
       @include button_basic;
       display: flex;
@@ -124,7 +124,7 @@
         background-color: #FFFFFF;
         color: #2a4fbf;
       }
-      
+
       &__icon {
         margin-right: 0.5rem;
       }
